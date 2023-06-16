@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Light-grey);
+}
+.container {
+  background-color: var(--White);
+  width: 700px;
+  border-radius: 1rem 1rem 10rem 1rem;
+  padding: 3rem;
+}
+
+.form-inputs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+.input-field label {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--Smokey-grey);
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+}
+input {
+  width: 140px;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Light-grey);
+  outline: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input:focus {
+  border: 1px solid var(--Purple);
+}
+input::placeholder {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.button {
+  position: relative;
+  border-top: 1px solid var(--Light-grey);
+  margin-bottom: 3rem;
+}
+.sumbit-btn {
+  position: absolute;
+  top: -38px;
+  right: 0;
+  border-radius: 50%;
+  padding: 1.2rem;
+  background-color: var(--Purple);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.output h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  font-style: italic;
+  height: fit-content;
+}
+.output span {
+  color: var(--Purple);
+}
+small {
+  color: var(--Light-red);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 40px auto 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 4rem 2rem;
+    width: 350px;
+    border-radius: 1.5rem 1.5rem 8rem 1.5rem;
+  }
+  .form-inputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+  input {
+    width: 85px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  input::placeholder {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .button {
+    margin-bottom: 4rem;
+  }
+  .sumbit-btn {
+    right: 106px;
+  }
+  .output h1 {
+    font-size: 3.2rem;
+  }
+}
